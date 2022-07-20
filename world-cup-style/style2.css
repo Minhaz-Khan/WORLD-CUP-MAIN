@@ -26,7 +26,7 @@
     column-gap: 1.5rem;
     background-image: var(--backgroundColor);
     margin: 5% 10% 5% 10%;
-    padding-top: 3%;
+    /* padding-top: 3%; */
     border-radius: 1.875rem;
 
 }
@@ -47,6 +47,8 @@
     font-weight: 400;
     font-size: 1rem;
     color: var(--withColor);
+    font-family: var(--poppinsFont);
+    font-weight: 400;
 }
 
 .red-button {
@@ -100,7 +102,6 @@
 
 .red-button:hover {
     width: 14rem;
-    /* background-color: #161616; */
     background: #338033;
     cursor: pointer;
 
@@ -137,9 +138,7 @@ main {
 }
 
 .live-strem {
-    /* display: grid;
-    grid-template-columns: repeat(1, 312px 1fr); */
-    /* column-gap: 3%; */
+
     display: flex;
 
 }
@@ -148,7 +147,6 @@ main {
     background-image: var(--backgroundColor);
     display: grid;
     grid-template-columns: 1fr;
-    /* row-gap: 1.875rem; */
     height: 19.5rem;
     width: 19.5rem;
 
@@ -170,8 +168,59 @@ main {
     font-size: 1.25rem;
     border: none;
 
+    transition: .6s;
+}
 
+.side-bar-btn:focus {
+    outline: none;
+}
 
+.side-bar-btn:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, .5);
+    width: 60px;
+    height: 100px;
+    left: 0;
+    top: 0;
+    opacity: .5s;
+    filter: blur(30px);
+    transform: translate(-130px) skew(-15deg);
+
+}
+
+.side-bar-btn:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, .2);
+    width: 30px;
+    height: 100px;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(30px);
+    transform: translate(-100px) skew(-15deg);
+
+}
+
+.side-bar-btn:hover {
+    background: #338033;
+    cursor: pointer;
+
+}
+
+.side-bar-btn:hover::before {
+    transform: translate(300px) skewX(-15deg);
+    opacity: .6;
+    transition: 1s;
+}
+
+.side-bar-btn:hover::after {
+    transform: translate(300px) skewX(-15deg);
+    opacity: 1;
+    transition: .7s;
 }
 
 .side-bar-btn a {
@@ -337,8 +386,6 @@ hr {
     .heading-container {
         display: flex;
         flex-direction: column;
-        /* justify-content: center;
-        align-items: center; */
         text-align: center;
         margin: 5%;
 
@@ -351,7 +398,7 @@ hr {
     }
 
     .heading-info {
-        height: 22px;
+        height: 30px;
         overflow: hidden;
         text-overflow: ellipsis;
     }
@@ -413,7 +460,7 @@ hr {
     }
 
     .heading-info {
-        height: 25px;
+        height: 30px;
         overflow: hidden;
         text-overflow: ellipsis;
     }
