@@ -168,6 +168,7 @@ main {
     font-size: 1.25rem;
     border: none;
     transition: .6s;
+    color: var(--blackColor);
 }
 
 .side-bar-btn:focus {
